@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Stream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero_img">
+            <div class="img_container">
+                <div class="image"></div>
+                <div class="linear_gradient"></div>
+                <h1>Movie Stream</h1>
+            </div>
+            <form class="search_container" action="/search" method="get">
+                <div class="search_child_container flex flex-aln-center">
+                    <input type="text" id="search" placeholder="Search your movie/show/anime" name="q" required>
+                    <button id="search_btn flex" type="submit">
+                        <span class="material-icons-round flex">search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="info flex flex-aln-center flex-jst-sb">
+            <div class="card flex flex-d-col flex-aln-center">
+                <div class="icon">
+                    <span class="material-icons-round">movie</span>
+                </div>
+                <div class="des">
+                    <span>Get all kinds of Movies Old, New, Hollywood and Bollywood</span>
+                </div>
+            </div>
+            <div class="card flex flex-d-col flex-aln-center">
+                <div class="icon">
+                    <span class="material-icons-round">live_tv</span>
+                </div>
+                <div class="des">
+                    <span>Get all kinds of series TV Series, Web Series, Hollywood and Bollywood</span>
+                </div>
+            </div>
+            <div class="card flex flex-d-col flex-aln-center">
+                <div class="icon">
+                    <span class="material-icons-round">hd</span>
+                </div>
+                <div class="des">
+                    <span>Get most of the Series and Movies in HD, FHD, 2K, 4K</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script file -->
+    <script src="../js/global.js"></script>
+    <script src="../js/homepage.js"></script>
+</body>
+
+</html>

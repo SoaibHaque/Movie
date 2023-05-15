@@ -1,0 +1,40 @@
+/* reset css */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-2);
+    color: var(--white-color);
+}
+
+input,
+select,
+button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}

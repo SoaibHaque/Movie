@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= resultTitle %> | Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="main flex flex-d-col">
+        <div class="navbar flex flex-jst-sb flex-aln-center">
+            <div class="site_name">Movie Stream</div>
+            <div class="nav_items flex">
+                <span class="item">Home</span>
+                <span class="item">Action</span>
+                <span class="item">Hindi</span>
+                <span class="item">Sci-Fi</span>
+                <span class="item">Anime</span>
+            </div>
+            <form class="nav_bar search_container flex" action="/search" method="get">
+                <div class="search_child_container flex flex-aln-center">
+                    <input type="text" id="search" placeholder="Search your movie/show/anime" name="q" required>
+                    <button id="search_btn flex" type="submit">
+                        <span class="material-icons-round flex">search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="results flex flex-d-col">
+            <form class="main_page search_container flex" action="/search" method="get">
+                <div class="search_child_container flex flex-aln-center">
+                    <input type="text" id="search" placeholder="Search your movie/show/anime" name="q" required>
+                    <button id="search_btn flex" type="submit">
+                        <span class="material-icons-round flex">search</span>
+                    </button>
+                </div>
+            </form>
+            <h3 class="search_msg">
+                Search Result of "<%= resultTitle %>"
+            </h3>
+            <div class="result_cards flex">
+                <% results.forEach(el=>{ %>
+                    <a class="video_card flex flex-d-col" href="<%= el.videoUrl %>">
+                        <div class="video_showcase flex" style="background-image: url('<%= el.posterUrl %>');">
+                            <div class="linear_gradient"></div>
+                            <div class="rating <% if(!el.rating){%> none <% } %> flex flex-aln-center">
+                                <span class="material-icons-round icon flex">star_rate</span>
+                                <span><%= el.rating %></span>
+                            </div>
+                            <div class="duration <% if(!el.duration){%> none <% } %> flex flex-aln-center">
+                                <span class="material-icons-round icon flex">schedule</span>
+                                <span><%= el.duration %></span>
+                            </div>
+                            <div class="quality <% if(!el.quality){%> none <% } %> flex flex-aln-center"><%= el.quality %></div>
+                            <div class="category <% if(!el.category){%> none <% } %> flex flex-aln-center"><%= el.category %></div>
+                        </div>
+                        <div class="des flex flex-d-col">
+                            <div class="video_title"><%= el.title %></div>
+                            <div class="video_tags <% if(el.tags.length == 0) {%> none <%}%> flex flex-d-col">
+                                <p class="label flex flex-aln-center">
+                                    <span class="material-icons-round icon">local_offer</span>
+                                </p>
+                                <p class="tags"><%= el.tags.join(", ").replaceAll('&amp;', '&') %></p>
+                            </div>
+                        </div>
+                    </a>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
