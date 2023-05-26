@@ -18,7 +18,8 @@ const fn_scrapping = {
             category: null
         }
         template.videoUrl = ele.querySelector('.content-thumbnail a').rawAttributes.href;
-        template.posterUrl = ele.querySelector('.content-thumbnail a img').rawAttributes.src;
+        template.posterUrl = ele.querySelector('.content-thumbnail a img')?.rawAttributes?.src ?? '../img/bg_2.jpg';
+        // template.posterUrl = ele.querySelector('.content-thumbnail a img').rawAttributes.src;
         template.rating = ele?.querySelector('.content-thumbnail .gmr-rating-item')?.innerText?.trim().slice(0, 3) ?? null;
         template.quality = ele?.querySelector('.content-thumbnail .gmr-quality-item')?.innerText?.trim() ?? null;
         template.duration = ele?.querySelector('.content-thumbnail .gmr-duration-item')?.innerText?.trim() ?? null;
