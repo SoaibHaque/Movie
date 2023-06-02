@@ -22,7 +22,10 @@ function homePage(req, res) {
 
 function searchPage(req, res) {
     req.query.q = req.query.q.trim();
-    fn_scrapping.searchQuery(req.query.q).then(obj => res.render('searchresult', {results: obj, resultTitle: req.query.q}));
+    fn_scrapping.searchQuery(req.query.q).then(obj => res.render('searchresult', {
+        results: obj,
+        resultTitle: req.query.q
+    }));
 }
 
 //routes

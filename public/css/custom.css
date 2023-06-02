@@ -4,9 +4,10 @@
     --placeholder-color: #b9b9b9;
     --info-card-color: #95a0bf;
     --movie-card-color-1: #e73a3a;
-    --movie-card-color-2: #00000080;
-    --movie-card-width: 9rem;
+    --movie-card-color-2: #000000b0;
+    --movie-card-width: 10rem;
     --white-color: white;
+    --yellow-color: #f3f365;
 }
 
 /* custom css */
