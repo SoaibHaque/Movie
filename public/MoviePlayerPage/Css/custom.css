@@ -1,0 +1,82 @@
+/* RESET CSS */
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+
+
+/* CUSTOM CSS */
+.flx {
+    display: flex;
+}
+
+.flx-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.jst-sb {
+    justify-content: space-between;
+}
+
+.aln-itm {
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* custom css */
+.flex {
+    display: flex;
+}
+
+.flex-aln-center {
+    align-items: center;
+}
+
+.flex-d-col {
+    flex-direction: column;
+}
+
+.flex-jst-center {
+    justify-content: center;
+}
+
+.flex-jst-sb {
+    justify-content: space-between;
+}
+
+.flex-jst-sa {
+    justify-content: space-around;
+}
+
+.none {
+    display: none !important;
+}
